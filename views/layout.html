@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Casa criativa</title>
+        
+        {% include "head.html" %}
+    </head>
+    
+    <body id="{{bodyId}}">
+
+        <div id="container">
+            {% block content %} 
+            {% endblock content%}
+        </div>
+        
+        <!-- Modal -->
+
+        {% include "modal.html" %}
+
+        <script src="/scripts.js"></script>
+    </body>
+
+</html>

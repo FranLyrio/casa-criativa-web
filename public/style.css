@@ -1,0 +1,318 @@
+/*
+CSS:
+Cascading StyleSheet
+
+BOX
+    conteúdo da caixa
+
+    Espaçamentos
+    Preenchimento
+    Bordas
+
+    Posicionamentos
+
+*/
+
+/*GLOBAL*/
+body {
+    background: #e5e5e5;
+    color: #000000;
+    font-family: 'Mukta', sans-serif;
+    margin: 0;
+    font-weight: 500;
+}
+
+body.hideScrol {
+    overflow: auto;
+}
+
+p, .description {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+}
+
+footer, footer a {
+    color: rgb(182, 168, 168);
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+    color: #ff5e84;
+}
+
+.button {
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    background: #ff5e84;
+    color: white;
+    font-weight: 500;
+    transition-duration: 0.5s;
+    /* padding: 10px; */
+    font-family: 'Mukta', sans-serif;
+    width: 125px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.button:hover {
+    background-color: #0984e3;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+/*PADRÃO*/
+
+#container {
+    width: 90%;
+    max-width: 980px;
+    margin: 12px 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+
+#intro {
+    width: 300px;  /* Tamanho da caixa */
+    margin: 40px;
+
+}
+
+
+main {
+    margin: 32px 0px;
+}
+
+
+section#buttons, footer {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+
+#buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.idea {
+    display: flex;
+    margin: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+    width: 600px;
+    /* height: 110px; */
+}
+
+.idea a {
+    color: #ff5e84;
+}
+
+.idea a:hover {
+    /* transition: 0.5s; */
+    text-decoration: underline;
+}
+
+.idea img {
+    width: 70px;
+    height: 70px;
+    margin: 32px;
+}
+
+.idea h3 {
+    margin: 0;
+}
+
+.idea p {
+    margin: 8px 0;
+    color: #777
+}
+
+.idea .description {
+    margin: 16px 0;
+}
+
+#modal {
+    background: #ff5e84;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transition: 400ms;
+    overflow-y: auto;
+}
+
+#modal .content {
+    margin-top: 5%;
+    color: white;
+}
+
+#modal .content h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto 15%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid rgba(141, 25,52, 0.5);
+    outline: none;
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+
+form a {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff22;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: end;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 400ms;
+}
+
+form a:hover {
+    background: #ffffff;
+    color: #ff5e84;
+    text-decoration: none;
+}
+
+form button {
+    background: white;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 32px;
+    grid-column: 2;
+    justify-self: end;
+    transition: 400ms;
+    border: none;
+    color: #ff5e84;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Mukta', sans-serif;
+}
+
+form button:hover {
+    background-color: #0984e3;
+    color: white;
+    text-decoration: none;
+}
+
+#modal.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* IDEAS.HTML */
+
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas nav {
+    display: flex;
+    align-items: center;
+}
+#page-ideas nav li {
+    list-style-type: none;
+    margin-right: 16px;
+}
+
+#page-ideas nav li a {
+    color: #000000;
+}
+
+#page-ideas nav li a.button {
+    color: white;
+}
+
+#page-ideas nav li:last-child {
+    margin: 0;
+}
+
+
+section#title {
+    text-align: center;
+    margin: 64px 0;
+}
+
+section#title p {
+    margin: 0;
+    opacity: 0.7;
+}
+
+section#title h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+section#ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+section#title,
+section#ideas,
+footer {
+    margin-top: 64px;
+}
+
+section#ideas .idea {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
